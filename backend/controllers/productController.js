@@ -28,7 +28,7 @@ const getProducts = asyncHandler(async (req, res) => {
 //  @desc    Fetch a products
 //  @route   GET /api/products/:id
 //  @access  Public
-const getProductsById = asyncHandler(async (req, res) => {
+const getProductById = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
 
   if (product) {
@@ -152,10 +152,11 @@ const getTopProducts = asyncHandler(async (req, res) => {
 
 export {
   getProducts,
-  getProductsById,
+  getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
   createProductReview,
-  getTopProducts
+  getTopProducts,
+
 };
